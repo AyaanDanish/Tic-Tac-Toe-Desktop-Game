@@ -194,6 +194,15 @@ namespace CN_Project_Server
                     //Call change turn status
                     TurnLabel.BeginInvoke(new labelDelegate(ChangeTurn), Color.Crimson, "Turn: Yours");
 
+                    if (CheckDraw())
+                    {
+                        scores.Add("Round " + currentRound + ": Draw!");
+                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                        matchWindow.ShowDialog();
+                        ResetGame(false);
+                        continue;
+                    }
+
                     if (CheckWinner(opponentSymbol))
                     {
                         // If this move lost you the tournament, then print and reset
@@ -215,7 +224,6 @@ namespace CN_Project_Server
                         RoundLabel.BeginInvoke(new labelDelegate(ChangeRound), Color.White, "Round: " + currentRound.ToString());
                         continue;
                     }
-
                 }
                 catch
                 {
@@ -300,6 +308,15 @@ namespace CN_Project_Server
                 }
             }
 
+            if (CheckDraw())
+            {
+                scores.Add("Round " + currentRound + ": Draw!");
+                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                matchWindow.ShowDialog();
+                ResetGame(false);
+                return;
+            }
+
             if (CheckWinner(mySymbol))
             {
                 if (CheckMatchOutcome(true))
@@ -349,7 +366,7 @@ namespace CN_Project_Server
 
         // Resets the game to its initial state
         // resetTournament: Whether to reset the tournament or not
-        private void ResetGame(bool resetTournament)
+        private void ResetGame(bool resetTournamentToo)
         {
             isMyTurn = true;
             cellSelected = "  ";
@@ -373,7 +390,7 @@ namespace CN_Project_Server
             else
                 ChangeTurn(Color.Crimson, "Turn: Yours");
 
-            if (resetTournament)
+            if (resetTournamentToo)
             {
                 myWins = 0;
                 myLosses = 0;
@@ -428,7 +445,16 @@ namespace CN_Project_Server
                 grid[x, y] = player;
             }
 
-            // Set the Tag property of the button to "true"
+            // Set the Tag of the previously selected cell to false, because we are about to set the newly selected one to true
+            if (cellSelected != "  ")
+            {
+                int oldX = cellSelected.ElementAt(0) - '0';
+                int oldY = cellSelected.ElementAt(1) - '0';
+                Control previousButton = ButtonGrid[oldX, oldY];
+                previousButton.Tag = "false";
+            }
+
+            // Set the Tag property of the current button to "true"
             buttonToChange.Tag = "true";
 
             // If we need to invoke the delegate, then use BeginInvoke to execute it asynchronously on the UI thread
@@ -467,6 +493,13 @@ namespace CN_Project_Server
         {
             button.Text = text;
         }
+
+        private bool CheckDraw()
+        {
+            //If there is no empty space in the grid, its a draw!
+            return !isButtonLocked.ContainsValue(false);
+        }
+
         private bool CheckWinner(char player)
         {
             //Horizontal checks
@@ -644,6 +677,9 @@ namespace CN_Project_Server
 
         private void HoverButton(int x, int y, Color borderColor, int borderSize, char buttonText)
         {
+            if (!isMyTurn)
+                return;
+
             RadioButton buttonToChange = (RadioButton) ButtonGrid[x, y];
 
             if ((string)buttonToChange.Tag == "false")

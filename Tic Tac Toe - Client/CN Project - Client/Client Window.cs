@@ -165,6 +165,15 @@ namespace CN_Project_Client
 
                     TurnLabel.BeginInvoke(new labelDelegate(ChangeTurn), Color.DeepSkyBlue, "Turn: Yours");
 
+                    if (CheckDraw())
+                    {
+                        scores.Add("Round " + currentRound + ": Draw!");
+                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                        matchWindow.ShowDialog();
+                        ResetGame(false);
+                        continue;
+                    }
+
                     if (CheckWinner(opponentSymbol))
                     {
                         // If this move lost you the tournament, display the tournament won message and reset
@@ -278,6 +287,15 @@ namespace CN_Project_Client
                 }
             }
 
+            if (CheckDraw())
+            {
+                scores.Add("Round " + currentRound + ": Draw!");
+                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                matchWindow.ShowDialog();
+                ResetGame(false);
+                return;
+            }
+
             if (CheckWinner(mySymbol))
             {
                 if (CheckMatchOutcome(true))
@@ -365,6 +383,7 @@ namespace CN_Project_Client
 
         private void SelectCell(int x, int y, char player)
         {
+
             Control buttonToChange = ButtonGrid[x, y];
 
             // If the current cell is already locked, then do nothing
@@ -376,6 +395,15 @@ namespace CN_Project_Client
             {
                 isButtonLocked[buttonToChange] = true;
                 grid[x, y] = player;
+            }
+
+            // Set the Tag of the previously selected cell to false, because we are about to set the newly selected one to true
+            if (cellSelected != "  ")
+            {
+                int oldX = cellSelected.ElementAt(0) - '0';
+                int oldY = cellSelected.ElementAt(1) - '0';
+                Control previousButton = ButtonGrid[oldX, oldY];
+                previousButton.Tag = "false";
             }
 
             buttonToChange.Tag = "true";
@@ -407,6 +435,12 @@ namespace CN_Project_Client
         private void ClearButtonText(RadioButton button, string text)
         {
             button.Text = text;
+        }
+
+        private bool CheckDraw()
+        {
+            //If there is no empty space in the grid, its a draw!
+            return !isButtonLocked.ContainsValue(false);
         }
 
         private bool CheckWinner(char player)
@@ -583,6 +617,8 @@ namespace CN_Project_Client
         #region Button Hover Handlers
         private void HoverButton(int x, int y, Color borderColor, int borderSize, char buttonText)
         {
+            if (!isMyTurn)
+                return;
 
             RadioButton buttonToChange = (RadioButton)ButtonGrid[x, y];
 
