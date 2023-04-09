@@ -10,6 +10,16 @@ Welcome to my desktop Tic Tac Toe application! It's designed to be a simple, eas
  - Game setup screen before the match starts
  - Scoreboard that updates after every round and every match
  - Play a tournament, best of N rounds wins (you decide the N!)
+ 
+ ## Game Rules
+The rules are simple and easy to learn. Most of you playing this game are probably already well-acquainted with them, but for those who aren't, I'll go over them here:
+
+ - Each player must take turns placing their symbol down on the 3x3 grid
+ - The goal of the game is to place down 3 symbols in a row, either horizontally, vertically, or diagonally.
+ - The first player who manages to complete a line of 3 symbols wins the round!
+ - If the board fills up without any player completing a line of 3, the round is a draw!
+ - To win the entire match, you must win the best of all N rounds!
+
 
 ## How to Play
 
@@ -32,14 +42,3 @@ It's simple! Here's step-by-instructions for setting up and playing a turn of th
  4. Once connected, the match should immediately begin with Round 1.
  5. Click on a cell to mark it. You can change your choice at any time by simply clicking on another cell.
  6. To confirm your move, click the send button. 
-
-## Game Rules
-The rules are simple and easy to learn. Most of you playing this game are probably already well-acquainted with them, but for those who aren't, I'll go over them here:
-
- - Each player must take turns placing their symbol down on the 3x3 grid
- - The goal of the game is to place down 3 symbols in a row, either horizontally, vertically, or diagonally.
- - The first player who manages to complete a line of 3 symbols wins the round!
- - If the board fills up without any player completing a line of 3, the round is a draw!
- - To win the entire match, you must win the best of all N rounds!
-
-
