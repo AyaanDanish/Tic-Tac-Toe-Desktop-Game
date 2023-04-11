@@ -413,6 +413,10 @@ namespace CN_Project_Server
             ScoreboardBtn.Enabled = status;
             RoundLabel.Visible = status;
             TurnLabel.Visible = status;
+
+            //Enable or disable network controls
+            ListenBtn.Enabled = !status;
+            PortTextBox.Enabled = !status;
         }
 
         // Sets the text and color of a button in the game grid

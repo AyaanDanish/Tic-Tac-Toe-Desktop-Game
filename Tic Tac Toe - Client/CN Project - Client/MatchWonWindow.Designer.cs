@@ -31,6 +31,7 @@
             this.ResultLabel = new System.Windows.Forms.Label();
             this.PlayAgainBtn = new System.Windows.Forms.Button();
             this.ScoreboardBtn = new System.Windows.Forms.Button();
+            this.QuitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ResultLabel
@@ -49,9 +50,9 @@
             this.PlayAgainBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(52)))));
             this.PlayAgainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlayAgainBtn.ForeColor = System.Drawing.Color.White;
-            this.PlayAgainBtn.Location = new System.Drawing.Point(142, 203);
+            this.PlayAgainBtn.Location = new System.Drawing.Point(142, 170);
             this.PlayAgainBtn.Name = "PlayAgainBtn";
-            this.PlayAgainBtn.Size = new System.Drawing.Size(132, 94);
+            this.PlayAgainBtn.Size = new System.Drawing.Size(132, 60);
             this.PlayAgainBtn.TabIndex = 24;
             this.PlayAgainBtn.Text = "Play Again";
             this.PlayAgainBtn.UseVisualStyleBackColor = false;
@@ -62,13 +63,26 @@
             this.ScoreboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(52)))));
             this.ScoreboardBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreboardBtn.ForeColor = System.Drawing.Color.White;
-            this.ScoreboardBtn.Location = new System.Drawing.Point(334, 203);
+            this.ScoreboardBtn.Location = new System.Drawing.Point(334, 170);
             this.ScoreboardBtn.Name = "ScoreboardBtn";
-            this.ScoreboardBtn.Size = new System.Drawing.Size(132, 94);
+            this.ScoreboardBtn.Size = new System.Drawing.Size(132, 127);
             this.ScoreboardBtn.TabIndex = 25;
             this.ScoreboardBtn.Text = "View Scoreboard";
             this.ScoreboardBtn.UseVisualStyleBackColor = false;
             this.ScoreboardBtn.Click += new System.EventHandler(this.ScoreboardBtn_Click);
+            // 
+            // QuitBtn
+            // 
+            this.QuitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(52)))));
+            this.QuitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitBtn.ForeColor = System.Drawing.Color.White;
+            this.QuitBtn.Location = new System.Drawing.Point(142, 237);
+            this.QuitBtn.Name = "QuitBtn";
+            this.QuitBtn.Size = new System.Drawing.Size(132, 60);
+            this.QuitBtn.TabIndex = 26;
+            this.QuitBtn.Text = "Quit";
+            this.QuitBtn.UseVisualStyleBackColor = false;
+            this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // MatchWonWindow
             // 
@@ -76,6 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(615, 353);
+            this.Controls.Add(this.QuitBtn);
             this.Controls.Add(this.ScoreboardBtn);
             this.Controls.Add(this.PlayAgainBtn);
             this.Controls.Add(this.ResultLabel);
@@ -93,5 +108,6 @@
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Button PlayAgainBtn;
         private System.Windows.Forms.Button ScoreboardBtn;
+        private System.Windows.Forms.Button QuitBtn;
     }
 }

@@ -40,5 +40,10 @@ namespace CN_Project
         {
             this.Close();
         }
+
+        private void QuitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

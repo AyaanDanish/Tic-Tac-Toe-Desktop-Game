@@ -30,6 +30,13 @@ namespace CN_Project_Server
                 return;
             }
 
+            if (numRounds < 0)
+            {
+                MessageBox.Show("Enter a positive number!");
+                return;
+            }
+                   
+
             if (XRadioButton.Checked)
                 playerSymbol = "X";
 

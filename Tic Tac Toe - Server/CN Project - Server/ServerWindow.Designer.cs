@@ -68,7 +68,7 @@
             // 
             // ConnectionStatusLabel
             // 
-            this.ConnectionStatusLabel.BackColor = System.Drawing.SystemColors.Desktop;
+            this.ConnectionStatusLabel.BackColor = System.Drawing.Color.Red;
             this.ConnectionStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ConnectionStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConnectionStatusLabel.ForeColor = System.Drawing.Color.Black;
@@ -394,7 +394,7 @@
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(611, 79);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(169, 32);
+            this.TitleLabel.Size = new System.Drawing.Size(170, 32);
             this.TitleLabel.TabIndex = 31;
             this.TitleLabel.Text = "Using TCP";
             // 
@@ -474,7 +474,7 @@
             this.MaximizeBox = false;
             this.Name = "ServerWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Server - Chat Messenger";
+            this.Text = " Tic Tac Toe - Server";
             this.Shown += new System.EventHandler(this.ServerWindow_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -358,17 +358,23 @@ namespace CN_Project_Client
 
         }
 
+        // Enables or disables game controls
+        // status: Whether to enable or disable controls
         private void EnableOrDisableControls(bool status)
         {
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)               
                     ButtonGrid[i, j].Enabled = status;
 
+            //Enable or disable other controls
             SendBtn.Enabled = status;
             ScoreboardBtn.Enabled = status;
             RoundLabel.Visible = status;
             TurnLabel.Visible = status;
 
+            //Enable or disable network controls
+            ConnectBtn.Enabled = !status;
+            IPTextBox.Enabled = !status;
         }
 
         private void MarkCell(Control button, string cellText)
