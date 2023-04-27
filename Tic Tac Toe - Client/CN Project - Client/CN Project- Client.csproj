@@ -73,12 +73,6 @@
     <Compile Include="ScoreboardWindow.Designer.cs">
       <DependentUpon>ScoreboardWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartupWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StartupWindow.Designer.cs">
-      <DependentUpon>StartupWindow.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Client Window.resx">
       <DependentUpon>Client Window.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,9 +94,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScoreboardWindow.resx">
       <DependentUpon>ScoreboardWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StartupWindow.resx">
-      <DependentUpon>StartupWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

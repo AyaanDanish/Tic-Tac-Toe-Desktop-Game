@@ -71,3 +71,17 @@ C:\Users\StudentUser\Source\Repos\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\
 C:\Users\StudentUser\Source\Repos\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN Project- Client.csproj.GenerateResource.cache
 C:\Users\StudentUser\Source\Repos\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\Tic Tac Toe - Client.exe
 C:\Users\StudentUser\Source\Repos\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\Tic Tac Toe - Client.pdb
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\bin\Debug\Tic Tac Toe - Client.exe.config
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\bin\Debug\Tic Tac Toe - Client.exe
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\bin\Debug\Tic Tac Toe - Client.pdb
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN Project- Client.csproj.AssemblyReference.cache
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN Project- Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN_Project_Client.ClientWindow.resources
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN_Project.MatchWonWindow.resources
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN_Project_Client.Properties.Resources.resources
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN_Project_Client.RoundWonWindow.resources
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN_Project_Client.ScoreboardWindow.resources
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN Project- Client.csproj.GenerateResource.cache
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\CN Project- Client.csproj.CoreCompileInputs.cache
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\Tic Tac Toe - Client.exe
+C:\Users\Ayaan Danish\Desktop\Tic-Tac-Toe-Desktop-Game\Tic Tac Toe - Client\CN Project - Client\obj\Debug\Tic Tac Toe - Client.pdb

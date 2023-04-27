@@ -244,6 +244,11 @@ namespace CN_Project_Server
             int port;
             Int32.TryParse(PortTextBox.Text, out port);
 
+            if (port < 0 || (port > 0 && port < 1024))
+            {
+                MessageBox.Show("Invalid port entered, please enter another.");
+                return;
+            }
 
             //Create new server socket to listen for incoming connections
             listenerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);

@@ -63,7 +63,7 @@ namespace CN_Project_Client
         public delegate void controlsDelegate(bool status);
 
         #endregion
-
+        
         public ClientWindow()
         {
             InitializeComponent();
@@ -234,7 +234,7 @@ namespace CN_Project_Client
             }
             catch
             {
-                MessageBox.Show("Unable to connect to host!");
+                MessageBox.Show("Unable to connect to host! Make sure the host is listening for a connection, and make sure you entered the correct IP and Port.");
                 return;
             }
         }
