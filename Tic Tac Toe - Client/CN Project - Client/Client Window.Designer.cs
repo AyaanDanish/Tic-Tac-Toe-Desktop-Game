@@ -439,7 +439,8 @@
             this.TurnLabel.ForeColor = System.Drawing.Color.Crimson;
             this.TurnLabel.Location = new System.Drawing.Point(28, 740);
             this.TurnLabel.Name = "TurnLabel";
-            this.TurnLabel.Size = new System.Drawing.Size(283, 39);
+            this.TurnLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.TurnLabel.Size = new System.Drawing.Size(303, 59);
             this.TurnLabel.TabIndex = 31;
             this.TurnLabel.Text = "Turn: Opponent\'s";
             this.TurnLabel.Visible = false;
@@ -451,7 +452,8 @@
             this.RoundLabel.ForeColor = System.Drawing.Color.White;
             this.RoundLabel.Location = new System.Drawing.Point(614, 740);
             this.RoundLabel.Name = "RoundLabel";
-            this.RoundLabel.Size = new System.Drawing.Size(156, 39);
+            this.RoundLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.RoundLabel.Size = new System.Drawing.Size(176, 59);
             this.RoundLabel.TabIndex = 36;
             this.RoundLabel.Text = "Round: 1";
             this.RoundLabel.Visible = false;

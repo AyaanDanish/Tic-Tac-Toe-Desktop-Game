@@ -63,7 +63,7 @@ namespace CN_Project_Client
         public delegate void controlsDelegate(bool status);
 
         #endregion
-        
+
         public ClientWindow()
         {
             InitializeComponent();
