@@ -95,9 +95,10 @@ namespace CN_Project_Server
         #region Labels and Port Box
 
         // This method runs when the user types in the PortTextBox and only allows digits to be entered
+        // add upper bound check
         private void PortTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if ((!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -194,15 +195,6 @@ namespace CN_Project_Server
                     //Call change turn status
                     TurnLabel.BeginInvoke(new labelDelegate(ChangeTurn), Color.Crimson, "Turn: Yours");
 
-                    if (CheckDraw())
-                    {
-                        scores.Add("Round " + currentRound + ": Draw!");
-                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
-                        matchWindow.ShowDialog();
-                        ResetGame(false);
-                        continue;
-                    }
-
                     if (CheckWinner(opponentSymbol))
                     {
                         // If this move lost you the tournament, then print and reset
@@ -224,6 +216,16 @@ namespace CN_Project_Server
                         RoundLabel.BeginInvoke(new labelDelegate(ChangeRound), Color.White, "Round: " + currentRound.ToString());
                         continue;
                     }
+
+                    if (CheckDraw())
+                    {
+                        scores.Add("Round " + currentRound + ": Draw!");
+                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                        matchWindow.ShowDialog();
+                        ResetGame(false);
+                        continue;
+                    }
+
                 }
                 catch
                 {
@@ -246,7 +248,7 @@ namespace CN_Project_Server
 
             if (port < 0 || (port > 0 && port < 1024))
             {
-                MessageBox.Show("Invalid port entered, please enter another.");
+                MessageBox.Show("Invalid port entered, please enter another. Allowed range is above port 1024.");
                 return;
             }
 
@@ -261,7 +263,7 @@ namespace CN_Project_Server
             }
             catch
             {
-                MessageBox.Show("This port is already in use, please enter another.");
+                MessageBox.Show("This port is already in use, please enter another. Allowed range is above port 1024.");
                 return;
             }
 
@@ -313,15 +315,6 @@ namespace CN_Project_Server
                 }
             }
 
-            if (CheckDraw())
-            {
-                scores.Add("Round " + currentRound + ": Draw!");
-                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
-                matchWindow.ShowDialog();
-                ResetGame(false);
-                return;
-            }
-
             if (CheckWinner(mySymbol))
             {
                 if (CheckMatchOutcome(true))
@@ -340,6 +333,15 @@ namespace CN_Project_Server
                 currentRound++;
 
                 ChangeRound(Color.White, "Round: " + currentRound.ToString());
+            }
+
+            if (CheckDraw())
+            {
+                scores.Add("Round " + currentRound + ": Draw!");
+                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                matchWindow.ShowDialog();
+                ResetGame(false);
+                return;
             }
         }
 

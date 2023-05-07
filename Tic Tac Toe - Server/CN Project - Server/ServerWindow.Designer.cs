@@ -40,10 +40,10 @@
             this.Button1_0 = new System.Windows.Forms.RadioButton();
             this.Button0_0 = new System.Windows.Forms.RadioButton();
             this.Button2_0 = new System.Windows.Forms.RadioButton();
-            this.Button2_1 = new System.Windows.Forms.RadioButton();
             this.Button2_2 = new System.Windows.Forms.RadioButton();
             this.Button0_2 = new System.Windows.Forms.RadioButton();
             this.Button0_1 = new System.Windows.Forms.RadioButton();
+            this.Button2_1 = new System.Windows.Forms.RadioButton();
             this.TitleLabel2 = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.SendBtn = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.PortTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PortTextBox.ForeColor = System.Drawing.Color.White;
             this.PortTextBox.Location = new System.Drawing.Point(16, 47);
+            this.PortTextBox.MaxLength = 5;
             this.PortTextBox.Name = "PortTextBox";
             this.PortTextBox.Size = new System.Drawing.Size(226, 26);
             this.PortTextBox.TabIndex = 16;
@@ -128,6 +129,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -137,10 +139,10 @@
             this.tableLayoutPanel1.Controls.Add(this.Button1_0, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Button0_0, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Button2_0, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Button2_1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Button2_2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Button0_2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.Button0_1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Button2_1, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 170);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -276,31 +278,6 @@
             this.Button2_0.MouseEnter += new System.EventHandler(this.Button2_0_MouseEnter);
             this.Button2_0.MouseLeave += new System.EventHandler(this.Button2_0_MouseLeave);
             // 
-            // Button2_1
-            // 
-            this.Button2_1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.Button2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button2_1.Enabled = false;
-            this.Button2_1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Button2_1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2_1.ForeColor = System.Drawing.Color.White;
-            this.Button2_1.Location = new System.Drawing.Point(251, 373);
-            this.Button2_1.Name = "Button2_1";
-            this.Button2_1.Size = new System.Drawing.Size(239, 179);
-            this.Button2_1.TabIndex = 33;
-            this.Button2_1.TabStop = true;
-            this.Button2_1.Tag = "false";
-            this.Button2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button2_1.UseVisualStyleBackColor = false;
-            this.Button2_1.CheckedChanged += new System.EventHandler(this.Button2_1_Click);
-            this.Button2_1.MouseEnter += new System.EventHandler(this.Button2_1_MouseEnter);
-            this.Button2_1.MouseLeave += new System.EventHandler(this.Button2_1_MouseLeave);
-            // 
             // Button2_2
             // 
             this.Button2_2.Appearance = System.Windows.Forms.Appearance.Button;
@@ -314,7 +291,7 @@
             this.Button2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2_2.ForeColor = System.Drawing.Color.White;
-            this.Button2_2.Location = new System.Drawing.Point(499, 373);
+            this.Button2_2.Location = new System.Drawing.Point(251, 373);
             this.Button2_2.Name = "Button2_2";
             this.Button2_2.Size = new System.Drawing.Size(239, 179);
             this.Button2_2.TabIndex = 32;
@@ -376,6 +353,31 @@
             this.Button0_1.MouseEnter += new System.EventHandler(this.Button0_1_MouseEnter);
             this.Button0_1.MouseLeave += new System.EventHandler(this.Button0_1_MouseLeave);
             // 
+            // Button2_1
+            // 
+            this.Button2_1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.Button2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button2_1.Enabled = false;
+            this.Button2_1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Button2_1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2_1.ForeColor = System.Drawing.Color.White;
+            this.Button2_1.Location = new System.Drawing.Point(499, 373);
+            this.Button2_1.Name = "Button2_1";
+            this.Button2_1.Size = new System.Drawing.Size(239, 179);
+            this.Button2_1.TabIndex = 33;
+            this.Button2_1.TabStop = true;
+            this.Button2_1.Tag = "false";
+            this.Button2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button2_1.UseVisualStyleBackColor = false;
+            this.Button2_1.CheckedChanged += new System.EventHandler(this.Button2_1_Click);
+            this.Button2_1.MouseEnter += new System.EventHandler(this.Button2_1_MouseEnter);
+            this.Button2_1.MouseLeave += new System.EventHandler(this.Button2_1_MouseLeave);
+            // 
             // TitleLabel2
             // 
             this.TitleLabel2.AutoSize = true;
@@ -394,7 +396,7 @@
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(611, 79);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(170, 32);
+            this.TitleLabel.Size = new System.Drawing.Size(169, 32);
             this.TitleLabel.TabIndex = 31;
             this.TitleLabel.Text = "Using TCP";
             // 
@@ -454,9 +456,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(895, 803);
+            this.ClientSize = new System.Drawing.Size(899, 807);
             this.Controls.Add(this.ScoreboardBtn);
             this.Controls.Add(this.RoundLabel);
             this.Controls.Add(this.TurnLabel);
@@ -470,8 +473,8 @@
             this.Controls.Add(this.ConnectionStatusLabel);
             this.Controls.Add(this.PortTextBox);
             this.Controls.Add(this.IPLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(915, 846);
             this.Name = "ServerWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Tic Tac Toe - Server";

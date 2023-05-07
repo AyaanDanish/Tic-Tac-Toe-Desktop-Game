@@ -149,7 +149,7 @@
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(611, 79);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(170, 32);
+            this.TitleLabel.Size = new System.Drawing.Size(169, 32);
             this.TitleLabel.TabIndex = 25;
             this.TitleLabel.Text = "Using TCP";
             // 
@@ -475,6 +475,7 @@
             this.AcceptButton = this.SendBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(899, 807);
             this.Controls.Add(this.ScoreboardBtn);
@@ -492,8 +493,8 @@
             this.Controls.Add(this.ConnectionStatusLabel);
             this.Controls.Add(this.IPTextBox);
             this.Controls.Add(this.IPLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(915, 846);
             this.Name = "ClientWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe - Client";

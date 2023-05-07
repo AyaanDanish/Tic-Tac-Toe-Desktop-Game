@@ -165,15 +165,6 @@ namespace CN_Project_Client
 
                     TurnLabel.BeginInvoke(new labelDelegate(ChangeTurn), Color.DeepSkyBlue, "Turn: Yours");
 
-                    if (CheckDraw())
-                    {
-                        scores.Add("Round " + currentRound + ": Draw!");
-                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
-                        matchWindow.ShowDialog();
-                        ResetGame(false);
-                        continue;
-                    }
-
                     if (CheckWinner(opponentSymbol))
                     {
                         // If this move lost you the tournament, display the tournament won message and reset
@@ -195,6 +186,15 @@ namespace CN_Project_Client
                         RoundLabel.BeginInvoke(new labelDelegate(ChangeRound), Color.White, "Round: " + currentRound.ToString());
                         continue;
                     }
+
+                    if (CheckDraw())
+                    {
+                        scores.Add("Round " + currentRound + ": Draw!");
+                        MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                        matchWindow.ShowDialog();
+                        ResetGame(false);
+                        continue;
+                    }
                 }
                 catch
                 {
@@ -212,6 +212,13 @@ namespace CN_Project_Client
         //Runs when the connect button is clicked
         private void ConnectBtn_Click(object sender, EventArgs e)
         {
+            if (!IPTextBox.Text.Contains(':'))
+            {
+                MessageBox.Show("Invalid address entered.\nPlease enter an address of the form <IP Address>:<Port>");
+                IPTextBox.Focus();
+                return;
+            }
+
             int port;
             string[] address = IPTextBox.Text.Split(':');
             string ip = address[0];
@@ -287,15 +294,6 @@ namespace CN_Project_Client
                 }
             }
 
-            if (CheckDraw())
-            {
-                scores.Add("Round " + currentRound + ": Draw!");
-                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
-                matchWindow.ShowDialog();
-                ResetGame(false);
-                return;
-            }
-
             if (CheckWinner(mySymbol))
             {
                 if (CheckMatchOutcome(true))
@@ -313,6 +311,15 @@ namespace CN_Project_Client
                 ResetGame(false);
                 currentRound++;
                 ChangeRound(Color.White, "Round: " + currentRound.ToString());
+            }
+
+            if (CheckDraw())
+            {
+                scores.Add("Round " + currentRound + ": Draw!");
+                MatchWonWindow matchWindow = new MatchWonWindow("It's a draw!", scores, Color.White);
+                matchWindow.ShowDialog();
+                ResetGame(false);
+                return;
             }
         }
         #endregion

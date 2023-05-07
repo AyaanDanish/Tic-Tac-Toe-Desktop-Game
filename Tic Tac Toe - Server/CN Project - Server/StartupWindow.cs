@@ -17,10 +17,16 @@ namespace CN_Project_Server
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             if (RoundsTextBox.Text == string.Empty)
+            {
+                MessageBox.Show("Please specify a number of rounds first!");
                 return;
+            }
 
             if (!XRadioButton.Checked && !ORadioButton.Checked)
+            {
+                MessageBox.Show("Please select a symbol first!");
                 return;
+            }
 
             numRounds = Convert.ToInt32(RoundsTextBox.Text);
 
@@ -29,13 +35,7 @@ namespace CN_Project_Server
                 MessageBox.Show("Please enter an odd number of rounds only!");
                 return;
             }
-
-            if (numRounds < 0)
-            {
-                MessageBox.Show("Enter a positive number!");
-                return;
-            }
-                   
+                  
 
             if (XRadioButton.Checked)
                 playerSymbol = "X";
@@ -67,6 +67,14 @@ namespace CN_Project_Server
                 playerSymbol = "";
             }
 
+        }
+
+        private void RoundsTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

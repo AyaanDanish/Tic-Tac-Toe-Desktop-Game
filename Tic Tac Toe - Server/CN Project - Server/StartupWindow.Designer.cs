@@ -64,10 +64,12 @@
             this.RoundsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoundsTextBox.ForeColor = System.Drawing.Color.White;
             this.RoundsTextBox.Location = new System.Drawing.Point(27, 153);
+            this.RoundsTextBox.MaxLength = 1;
             this.RoundsTextBox.Name = "RoundsTextBox";
             this.RoundsTextBox.Size = new System.Drawing.Size(226, 26);
             this.RoundsTextBox.TabIndex = 19;
             this.RoundsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.RoundsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RoundsTextBox_KeyPress);
             // 
             // ConfirmButton
             // 
@@ -128,6 +130,7 @@
             this.Controls.Add(this.RoundsLabel);
             this.Controls.Add(this.RoundsTextBox);
             this.Controls.Add(this.SymbolLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "StartupWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Setup";
