@@ -43,13 +43,13 @@
             this.Button2_2 = new System.Windows.Forms.RadioButton();
             this.Button0_2 = new System.Windows.Forms.RadioButton();
             this.Button0_1 = new System.Windows.Forms.RadioButton();
-            this.Button2_1 = new System.Windows.Forms.RadioButton();
             this.TitleLabel2 = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.SendBtn = new System.Windows.Forms.Button();
             this.TurnLabel = new System.Windows.Forms.Label();
             this.RoundLabel = new System.Windows.Forms.Label();
             this.ScoreboardBtn = new System.Windows.Forms.Button();
+            this.Button2_1 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,10 +139,10 @@
             this.tableLayoutPanel1.Controls.Add(this.Button1_0, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.Button0_0, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Button2_0, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.Button2_2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Button0_2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.Button0_1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.Button2_1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.Button2_2, 2, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 170);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -291,7 +291,7 @@
             this.Button2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Button2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2_2.ForeColor = System.Drawing.Color.White;
-            this.Button2_2.Location = new System.Drawing.Point(251, 373);
+            this.Button2_2.Location = new System.Drawing.Point(499, 373);
             this.Button2_2.Name = "Button2_2";
             this.Button2_2.Size = new System.Drawing.Size(239, 179);
             this.Button2_2.TabIndex = 32;
@@ -352,31 +352,6 @@
             this.Button0_1.CheckedChanged += new System.EventHandler(this.Button0_1_Click);
             this.Button0_1.MouseEnter += new System.EventHandler(this.Button0_1_MouseEnter);
             this.Button0_1.MouseLeave += new System.EventHandler(this.Button0_1_MouseLeave);
-            // 
-            // Button2_1
-            // 
-            this.Button2_1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.Button2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button2_1.Enabled = false;
-            this.Button2_1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Button2_1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.Button2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2_1.ForeColor = System.Drawing.Color.White;
-            this.Button2_1.Location = new System.Drawing.Point(499, 373);
-            this.Button2_1.Name = "Button2_1";
-            this.Button2_1.Size = new System.Drawing.Size(239, 179);
-            this.Button2_1.TabIndex = 33;
-            this.Button2_1.TabStop = true;
-            this.Button2_1.Tag = "false";
-            this.Button2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button2_1.UseVisualStyleBackColor = false;
-            this.Button2_1.CheckedChanged += new System.EventHandler(this.Button2_1_Click);
-            this.Button2_1.MouseEnter += new System.EventHandler(this.Button2_1_MouseEnter);
-            this.Button2_1.MouseLeave += new System.EventHandler(this.Button2_1_MouseLeave);
             // 
             // TitleLabel2
             // 
@@ -452,6 +427,31 @@
             this.ScoreboardBtn.UseVisualStyleBackColor = false;
             this.ScoreboardBtn.Click += new System.EventHandler(this.ScoreboardBtn_Click);
             // 
+            // Button2_1
+            // 
+            this.Button2_1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.Button2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button2_1.Enabled = false;
+            this.Button2_1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Button2_1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.Button2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button2_1.ForeColor = System.Drawing.Color.White;
+            this.Button2_1.Location = new System.Drawing.Point(251, 373);
+            this.Button2_1.Name = "Button2_1";
+            this.Button2_1.Size = new System.Drawing.Size(239, 179);
+            this.Button2_1.TabIndex = 33;
+            this.Button2_1.TabStop = true;
+            this.Button2_1.Tag = "false";
+            this.Button2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button2_1.UseVisualStyleBackColor = false;
+            this.Button2_1.CheckedChanged += new System.EventHandler(this.Button2_1_Click);
+            this.Button2_1.MouseEnter += new System.EventHandler(this.Button2_1_MouseEnter);
+            this.Button2_1.MouseLeave += new System.EventHandler(this.Button2_1_MouseLeave);
+            // 
             // ServerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,7 +498,6 @@
         private System.Windows.Forms.RadioButton Button1_0;
         private System.Windows.Forms.RadioButton Button0_0;
         private System.Windows.Forms.RadioButton Button2_0;
-        private System.Windows.Forms.RadioButton Button2_1;
         private System.Windows.Forms.RadioButton Button2_2;
         private System.Windows.Forms.RadioButton Button0_2;
         private System.Windows.Forms.RadioButton Button0_1;
@@ -508,6 +507,7 @@
         private System.Windows.Forms.Label TurnLabel;
         private System.Windows.Forms.Label RoundLabel;
         private System.Windows.Forms.Button ScoreboardBtn;
+        private System.Windows.Forms.RadioButton Button2_1;
     }
 }
 
